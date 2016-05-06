@@ -1,0 +1,45 @@
+% Hello, this is a template document for your thesis
+% Vadim K.
+
+% Basic formatting (font size and spacing, paper margins)
+\documentclass[14pt]{extreport}
+\usepackage[a4paper, inner=3cm, outer=1cm, top=2cm, bottom=2cm, bindingoffset=0cm]{geometry}
+\usepackage[onehalfspacing]{setspace}
+
+\include{Config}
+
+\begin{document}
+
+    % Title & assignment
+    \input{title.tex}
+
+    % Abstract
+    \include{0.Abstract}
+
+    % Table of contents,
+    % LaTeX counts pages without the cover and abstract, 
+    % so you should manually set the page, where TOC starts
+    \setcounter{page}{6}
+    \tableofcontents
+    \listoffigures
+    \listoftables
+
+    \include{1.Introduction}
+    \include{2.Techniques}
+    \include{3.Strategies}
+    \include{4.Mobile}
+    \include{5.Methodology}
+    \include{6.Building}
+
+    \include{7.Conclusion}
+
+    % Appendix
+    \appendix
+    \include{8.Appendix}
+    
+    \bibliographystyle{unsrt}
+    \bibliography{Bibliography}
+    
+    \include{9.Additional}
+
+\end{document}
