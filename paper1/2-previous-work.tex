@@ -2,6 +2,17 @@
 
 \addcontentsline{toc}{chapter}{Epidemiological Modeling}
 
-The most epidemic models are designed by SIR concept which was developed by W. O. Kermack and A. G. McKendrick. They considered a fixed population with only three classes: susceptible, $S(t)$; infected, $I(t)$; and recovered, $R(t)$ [14]. The compartments used for this model consist of three classes.\cite{lamport94}
+The most epidemic models are designed by SIR concept which was developed by W. O. Kermack and A. G. McKendrick. They considered a fixed population with only three classes: susceptible, $S(t)$; infected, $I(t)$; and recovered, $R(t)$ \cite{per14}. The compartments used for this model consist of three classes.
+
+$S(t)$ - individuals who are susceptible to the disease, it represents the number of people who are not yet infected with the disease at time t \cite{per14};
+$I(t)$ - individuals who have been infected with the disease at time t and are able to spread the disease to those in the susceptible category \cite{per14};
+$R(t)$ - people who have recovered from the disease after being infected. Those in this category are not able to be infected again or to transmit the infection to others \cite{per14}.
+
+The flow of this model may be considered as follows:
+
+$S -> I -> R$.
+
+Considering that the total population is N and $N = S(t) + I(t) + R(t)$, the following equations can be derived \cite{per15}:
+
 
 There has recently been conducted a study that examined the case of transmission of resistant and susceptible bacteria in hospitals. The research of such processes is particularly important for understanding the nosocomial transmission rates of the bacteria. It is significant for the healthcare workers to be able to control the spread of resistant bacteria and reduce their antimicrobial resistance. The model may predict whether the usage of an antibiotic which does not have corresponding resistant bacteria present in the hospital will be useful to decrease the level of resistance in the examined bacteria.
