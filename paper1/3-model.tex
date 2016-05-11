@@ -7,13 +7,13 @@ We are going to observe a mathematical model proposed by \cite{lips}, which desc
 The model observes the transmission dynamics of the bacteria in a hospital, with regard to the usage of two different antibiotics - drug A and drug B. Some portion of all individuals that enter the hospital are already colonized with the bacteria, that we are looking at. The differential equations for the model will look as follows:
 
 \begin{equation}
-\frac{dS}{dt} = m \myu + \beta S X - (\tau[1] + \tau[2] + \gamma + \myu) S
+\frac{dS}{dt} = m \myu + \beta S X - (\tau_1 + \tau_2 + \gamma + \myu) S
 \end{equation}
 
 \begin{equation}
-\frac{dR}{dt} = \beta (1 - c) R X - (\myu + \tau[2] + \gamma) R
+\frac{dR}{dt} = \beta (1 - c) R X - (\myu + \tau_2 + \gamma) R
 \end{equation}
 
 \begin{equation}
-\frac{dX}{dt} = (1 - m) \myu + (\tau[1] + \tau[2] + \gamma) S + (\tau[2] + \gamma) R - \beta S X - \beta (1-c) R X - \myu X.
+\frac{dX}{dt} = (1 - m) \myu + (\tau_1 + \tau_2 + \gamma) S + (\tau_2 + \gamma) R - \beta S X - \beta (1-c) R X - \myu X.
 \end{equation}
