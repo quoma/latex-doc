@@ -36,3 +36,37 @@ describe the disease spreading process among population using mathematical laws.
 a) Stochastic models – are based on the randomization. They incorporate randomness into the model i.e. includes the points that would give random results each time you pass them during the model implementation. They attempt to model the process analogical to real life. So, relationship between separate objects is modeled separately. For example, the contacts between people in the population are modeled and if one person is infected, the second person can be infected with particular probability. This probability is usually done by probability distribution functions. So, stochastic models are used to estimate the probabilistic quantities for the outcome events, such as the probability distribution of extinction time, the probability distribution of final epidemic size, and the associate mean and so on. Stochastic models can be easily applied in the population with limited size as every person’s relation is modeled.
 
 b) Deterministic compartmental models – In deterministic model no randomness is involved. Outcomes are precisely defined through constant variables. In the deterministic compartmental model, we consider that the population is divided into different subgroups or compartments, which represent a specific stage of the epidemic. The transition rates from one class to another are mathematically expressed as derivatives, hence the model is formulated using differential equations. While building such models, it must be assumed that the population size in a compartment is differentiable with respect to time and that the epidemic process is deterministic. In other words, the changes in population of a compartment can be calculated using only the history used to develop the model.
+
+\section{Existing Traditional Models of Epidemics Spreading}
+
+The most popular method of modeling the epidemics is based on the use of differential equations. In these models, the dynamics of the spread of the disease is described by a system of differential equations, where the numbers of sick and healthy people of the modeled area serve as the variable states [14]. The solution of such system of equations gives the level of infection rates at each moment of the model time. In order to make model, parameters must be defined. In the epidemic models, the following variables are used:
+
+\begin{compactenum}
+\item $S$: Susceptibles
+
+\item $E$: Exposed Individuals in the Latent Period
+
+\item $I$: Infectives
+
+\item $R$: Removed with Immunity
+
+\item $\beta$: Contact Rate
+
+\item $\mu$: Average Death Rate
+
+\item $B$: Average Birth Rate
+
+\item $1/\epsilon$: Average Latent Period
+
+\item $1/\gamma$: Average Infectious Period
+
+\item $R_0$: Basic Reproduction Number
+
+\item $N$: Total Population
+
+\item $f$: Average Loss of Immunity Rate of Recovered Individuals
+
+\item $\delta$: Average Temporary Immunity Period
+\end{compactenum}
+
+
