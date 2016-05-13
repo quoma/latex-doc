@@ -2,6 +2,7 @@
 
 \addcontentsline{toc}{chapter}{Epidemiological Modeling}
 
+\section{The SIR Model}
 The most epidemic models are designed by SIR concept which was developed by W. O. Kermack and A. G. McKendrick. They considered a fixed population with only three classes: susceptible, $S(t)$; infected, $I(t)$; and recovered, $R(t)$ \cite{per14}. The compartments used for this model consist of three classes.
 
 $S(t)$ - individuals who are susceptible to the disease, it represents the number of people who are not yet infected with the disease at time t \cite{per14};
@@ -37,3 +38,36 @@ Several assumptions were made in the formulation of these equations:
 3) These processes which occur simultaneously are referred to as the Law of Mass Action, a widely accepted idea that the rate of contact between two groups in a population is proportional to the size of each of the groups concerned\cite{per14}.
 
 There has recently been conducted a study that examined the case of transmission of resistant and susceptible bacteria in hospitals. The research of such processes is particularly important for understanding the nosocomial transmission rates of the bacteria. It is significant for the healthcare workers to be able to control the spread of resistant bacteria and reduce their antimicrobial resistance. The model may predict whether the usage of an antibiotic, which does not have corresponding resistant bacteria present in the hospital will be useful to decrease the level of resistance in the examined bacteria.
+
+\section{The SIR Model with Births and Deaths}
+Often, there are situations in which an arrival of new susceptible individuals into the population occurs. For this type of situation births and deaths must be included in the model. The following differential equations represent this model, assuming a death rate   and birth rate equal to the death rate [14]:
+
+\begin{equation}
+\frac{dS}{dt} = -\beta S I + \mu(N - S)
+\end{equation}
+
+\begin{equation}
+\frac{dI}{dt} = \beta S I - \gamma I - \mu I
+\end{equation}
+
+\begin{equation}
+\frac{dR}{dt} = \gamma I - \mu R
+\end{equation}
+
+\section{The SIS Model with Births and Deaths}
+
+The SIS model can be easily derived from the SIR model by simply considering that the individuals recover with no immunity to the disease, that is, individuals are immediately susceptible once they have recovered [14].
+
+\begin{equation}
+S \rightarrow I \rightarrow S
+\end{equation}
+
+Removing the equation representing the recovered population from the SIR model and adding those removed from the infected population into the susceptible population gives the following differential equations:
+
+\begin{equation}
+\frac{dS}{dt} = -\beta S I + \mu(N - S) + \gamma I
+\end{equation}
+
+\begin{equation}
+\frac{dI}{dt} = \beta S I - \gamma I - \mu I
+\end{equation}
