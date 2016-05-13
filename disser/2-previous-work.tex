@@ -71,3 +71,52 @@ Removing the equation representing the recovered population from the SIR model a
 \begin{equation}
 \frac{dI}{dt} = \beta S I - \gamma I - \mu I
 \end{equation}
+
+\section{The SIRS Model}
+
+This model is simply an extension of the SIR model as we will see from its construction.
+
+\begin{equation}
+S \rightarrow I \rightarrow R \rightarrow S
+\end{equation}
+
+The only difference is that it allows members of the recovered class to be free of infection and rejoin the susceptible class \cite{per14}.
+
+\begin{equation}
+\frac{dS}{dt} = -\beta S I + \mu(N - S) + f R
+\end{equation}
+
+\begin{equation}
+\frac{dI}{dt} = \beta S I - \gamma I - \mu I
+\end{equation}
+
+\begin{equation}
+\frac{dR}{dt} = \gamma I - \mu R - f R
+\end{equation}
+
+
+\section{The SEIR Model}
+
+The SIR model discussed above takes into account only those diseases which cause an individual to be able to infect others immediately upon their infection. Many diseases have what is termed a latent or exposed phase, during which the individual is said to be infected but not infectious \cite{per14}.
+
+\begin{equation}
+S \rightarrow E \rightarrow I \rightarrow R
+\end{equation}
+
+In this model the host population (N) is broken into four compartments: susceptible, exposed, infectious, and recovered, with the numbers of individuals in a compartment, or their densities denoted respectively by S(t), E(t), I(t), R(t), that is $N = S(t) + E(t) + I(t) + R(t)$
+
+\begin{equation}
+\frac{dS}{dt} = B -\beta S I - \mu S
+\end{equation}
+
+\begin{equation}
+\frac{dE}{dt} = \beta S I - (\varepsilon + \mu) E
+\end{equation}
+
+\begin{equation}
+\frac{dI}{dt} = \varepsilon E - (\gamma + \mu) I
+\end{equation}
+
+\begin{equation}
+\frac{dR}{dt} = \gamma I - \mu R
+\end{equation}
