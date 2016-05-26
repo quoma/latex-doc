@@ -129,7 +129,7 @@ The Beta parameter ($\beta$) is the contact rate between the individuals of the 
 
 \begin{figure}[!ht]
   \centering
-  \includegraphics[height=0.3\textwidth]{img/screens/basic/basic14}
+  \includegraphics[height=0.25\textwidth]{img/screens/basic/basic14}
   \caption{Beta parameter - the contact rate}
 \end{figure}
 
@@ -140,6 +140,23 @@ In order for the AnyLogic compiler to see the Beta variable and find the corresp
   \includegraphics[height=0.5\textwidth]{img/screens/basic/basic15}
   \caption{Beta parameter as a dependency of InfectionS}
 \end{figure}
+
+Now we also need to connect the Resistant stock to the system. Uncolonized individuals are constantly getting infected by the resistant bacteria strain, so we create a flow from Uncolonized stock to the Resistant stock. Correspondingly, the name of the flow will be InfectionR, indicating the infection by resistant bacteria.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=0.5\textwidth]{img/screens/basic/basic17}
+  \caption{The rate of infection by resistant strain}
+\end{figure}
+
+The value of the InfectionR is somewhat similar to the value of InfectionS. We set it to be $Beta \times (1-c) \times Resistant \times Uncolonized$. Here there is a new variable called $c$, which will be discussed next.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=0.3\textwidth]{img/screens/basic/basic16}
+  \caption{The rate of infection by resistant strain}
+\end{figure}
+
 
 %\begin{figure}[!ht]
 %    \centering
