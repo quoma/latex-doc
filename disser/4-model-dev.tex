@@ -13,6 +13,14 @@ This chapter is going to describe the process of implementation, i.e. transition
 %  \caption{A picture of a gull.}
 %\end{figure}
 
+AnyLogic is a system that provides many useful components that can be used for modeling. The list of the available elements can be seen in the figure.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=0.5\textwidth]{img/screens/basic/basic22}
+  \caption{The list of interactive elements used for System Dynamics models}
+\end{figure}
+
 \begin{figure}[!ht]
     \centering
     \begin{subfigure}[b]{0.3\textwidth}
@@ -45,7 +53,15 @@ Here we can see how every entity is treated in AnyLogic. There have been created
     \caption{Properties of the basic stock elements}
 \end{figure}
 
-In order to set the initial values to the stocks, we will need to create so-called parameters, which are bound to the created stocks. Each parameter holds a value that will be set to the corresponding stock. After the start of model execution, the value of the actual stock may change, independent of the parameter. Since the stocks that we have created represent the probabilities of any individual to fall into one of the categories (susceptible, resistant or uncolonized), they should sum up to 1. That's why we will set the initial values as 0.33, 0.33 and 0.34 (approximately equal values).
+In order to set the initial values to the stocks, we will need to create so-called parameters, which are bound to the created stocks. Each parameter holds a value that will be set to the corresponding stock. After the start of model execution, the value of the actual stock may change, independent of the parameter. We create a parameter called S0 and connect it with the existing Susceptible stock.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=0.5\textwidth]{img/screens/basic/basic8}
+  \caption{Binding a parameter to Susceptible stock}
+\end{figure}
+
+Since the stocks that we have created represent the probabilities of any individual to fall into one of the categories (susceptible, resistant or uncolonized), they should sum up to 1. That's why we will set the initial values as 0.33, 0.33 and 0.34 (approximately equal values).
 
 \begin{figure}[!ht]
     \centering
