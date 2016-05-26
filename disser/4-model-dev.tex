@@ -6,7 +6,7 @@
 
 This chapter is going to describe the process of implementation, i.e. transition from a mathematical model to computer simulation. First of all we are going to create the basic elements that are essential to our model.
 
-%\begin{figure}[!ht]
+%\begin{figure}[H]
 %  \centering
 %  \includegraphics[height=0.5\textwidth]{img/screens/basic/basic4}
 %  \includegraphics[height=0.5\textwidth]{img/screens/basic/basic3}
@@ -15,13 +15,13 @@ This chapter is going to describe the process of implementation, i.e. transition
 
 AnyLogic is a system that provides many useful components that can be used for modeling. The list of the available elements can be seen in the figure.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
   \centering
   \includegraphics[height=0.5\textwidth]{img/screens/basic/basic22}
   \caption{The list of interactive elements used for System Dynamics models}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.3\textwidth}
         \includegraphics[width=0.5\textwidth]{img/screens/basic/basic4}
@@ -38,7 +38,7 @@ AnyLogic is a system that provides many useful components that can be used for m
 
 Here we can see how every entity is treated in AnyLogic. There have been created three stocks for three different groups of the hospital population. We name every stock as Susceptible, Uncolonized and Resistant. Each stock needs to have an initial value, which indicates how many individuals were present in each group at the beginning. We call these initial values S0, X0 and R0 respectively.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{img/screens/basic/basic1}
@@ -55,7 +55,7 @@ Here we can see how every entity is treated in AnyLogic. There have been created
 
 In order to set the initial values to the stocks, we will need to create so-called parameters, which are bound to the created stocks. Each parameter holds a value that will be set to the corresponding stock. After the start of model execution, the value of the actual stock may change, independent of the parameter. We create a parameter called S0 and connect it with the existing Susceptible stock.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
   \centering
   \includegraphics[height=0.3\textwidth]{img/screens/basic/basic8}
   \caption{Binding a parameter to Susceptible stock}
@@ -63,7 +63,7 @@ In order to set the initial values to the stocks, we will need to create so-call
 
 When the Susceptible stock is connected with the created parameter, we can refer to that parameter when specifying the initial value of it. Since the stocks that we have created represent the probabilities of any individual to fall into one of the categories (susceptible, resistant or uncolonized), they should sum up to 1. Since we want to set approximately equal initial values to all three groups of people, we set S0 to be 0.33.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
   \centering
   \includegraphics[height=0.3\textwidth]{img/screens/basic/basic7}
   \caption{Properties of the S0 parameter}
@@ -71,7 +71,7 @@ When the Susceptible stock is connected with the created parameter, we can refer
 
 After having connected the Susceptible stock with its parameter, we can do the same thing to Uncolonized stock. The parameter for its initial value will be called X0. The connection between the parameter and its stock is similar to the previous example.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
   \centering
   \includegraphics[height=0.3\textwidth]{img/screens/basic/basic9}
   \caption{Binding a parameter to Uncolonized stock}
@@ -79,7 +79,7 @@ After having connected the Susceptible stock with its parameter, we can do the s
 
 The value of X0 will be the same that we have set to S0. On the following figure we can see how it is set to 0.33.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
   \centering
   \includegraphics[height=0.3\textwidth]{img/screens/basic/basic6}
   \caption{Properties of the X0 parameter}
@@ -87,7 +87,7 @@ The value of X0 will be the same that we have set to S0. On the following figure
 
 We have set the initial values for our Susceptible and Uncolonized stocks. Finally, we are ready to create the corresponding parameter for Resistant stock. The parameter will be connected to the stock, so that we can use its value to specify the initial value of the population infected by resistant strain.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
   \centering
   \includegraphics[height=0.2\textwidth]{img/screens/basic/basic10}
   \caption{Binding a parameter to Resistant stock}
@@ -95,7 +95,7 @@ We have set the initial values for our Susceptible and Uncolonized stocks. Final
 
 The value of the R0 should complement the values of X0 and S0 to form a sum of 1. As we mentioned before, the three stocks are representing probabilities of falling into corresponding categories of individuals. That is why to the total sum of the initial values of these parameters should be equal to 1. Therefore, the initial value of X0 is set to 0.34. While it is not equal to the previous parameters, it is chosen to be as close to them as possible.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
   \centering
   \includegraphics[height=0.3\textwidth]{img/screens/basic/basic5}
   \caption{R0 parameter and its properties}
@@ -103,7 +103,7 @@ The value of the R0 should complement the values of X0 and S0 to form a sum of 1
 
 On the following figure we can observe the current intermediate result. Each stock is bound to its own parameters that is responsible for its initial value. The next step to perform is to connect these stocks for further interaction.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
   \centering
   \includegraphics[height=0.6\textwidth]{img/screens/basic/basic11}
   \caption{The created stocks of populations with their respective parameters}
@@ -111,7 +111,7 @@ On the following figure we can observe the current intermediate result. Each sto
 
 Now we need to create the first flow element. The flow that we are going to create is starting from the uncolonized stock and headed to the susceptible stock. The figure below shows how it looks like in the model representation. We call this flow InfectionS to indicate that it represents an infection of people by susceptible strain of bacteria.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
   \centering
   \includegraphics[height=0.6\textwidth]{img/screens/basic/basic13}
   \caption{Uncolonized population is constantly infected by susceptible bacteria strain}
@@ -119,7 +119,7 @@ Now we need to create the first flow element. The flow that we are going to crea
 
 In order to specify the rate at which the population of uncolonized group is infected by susceptible bacteria, we are going to open the properties of InfectionS. In the value textbox, as it can be seen from the figure, the value we specified is equal to $Beta \times Susceptible \times Uncolonized$. As it is noticeable, there is some new value here, which is Beta. Creation of Beta parameter will be our next step.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
   \centering
   \includegraphics[height=0.3\textwidth]{img/screens/basic/basic12}
   \caption{The flow amount for InfectionS}
@@ -127,7 +127,7 @@ In order to specify the rate at which the population of uncolonized group is inf
 
 The Beta parameter ($\beta$) is the contact rate between the individuals of the observed hospital society. It means that this fraction of people are going to be contacted by any given individual. We create the parameter Beta and set its value to be 0.2.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
   \centering
   \includegraphics[height=0.25\textwidth]{img/screens/basic/basic14}
   \caption{Beta parameter - the contact rate}
@@ -135,7 +135,7 @@ The Beta parameter ($\beta$) is the contact rate between the individuals of the 
 
 In order for the AnyLogic compiler to see the Beta variable and find the corresponding value, we need to specify it as a dependency for our InfectionS flow. The value of the InfectionS flow uses the Beta parameter value, so we link them with each other, as it is indicated in the figure below.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
   \centering
   \includegraphics[height=0.5\textwidth]{img/screens/basic/basic15}
   \caption{Beta parameter as a dependency of InfectionS}
@@ -143,7 +143,7 @@ In order for the AnyLogic compiler to see the Beta variable and find the corresp
 
 Now we also need to connect the Resistant stock to the system. Uncolonized individuals are constantly getting infected by the resistant bacteria strain, so we create a flow from Uncolonized stock to the Resistant stock. Correspondingly, the name of the flow will be InfectionR, indicating the infection by resistant bacteria.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
   \centering
   \includegraphics[height=0.5\textwidth]{img/screens/basic/basic17}
   \caption{The rate of infection by resistant strain}
@@ -151,7 +151,7 @@ Now we also need to connect the Resistant stock to the system. Uncolonized indiv
 
 The value of the InfectionR is somewhat similar to the value of InfectionS. We set it to be $Beta \times (1-c) \times Resistant \times Uncolonized$. Here there is a new variable called $c$, which will be discussed next.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
   \centering
   \includegraphics[height=0.4\textwidth]{img/screens/basic/basic16}
   \caption{The rate of infection by resistant strain}
@@ -159,7 +159,7 @@ The value of the InfectionR is somewhat similar to the value of InfectionS. We s
 
 The new constant is introduced at this point point, which is denoted as $c$. The variable indicates the portion of Beta which does not transfer to the resistant category. If $c = 0$, then the rate of InfectionR is identical to the value of InfectionS. With increasing value of $c$, the rate of InfectionR decreases. We set 0.1 as the initial value for this parameter.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
   \centering
   \includegraphics[height=0.4\textwidth]{img/screens/basic/basic18}
   \caption{The value of fitness cost of resistance to drug 1}
@@ -175,7 +175,7 @@ In order to enable the usage of $c$ parameter in the differential equation of In
 
 The same principle applies to the Beta variable. Since Beta is used in InfectionR as well as in InfectionS, the parameter should be connected to the flow, too. The InfectionR flow has two dependent parameters at the moment (there are also the values of Uncolonized and Resistant stocks).
 
-\begin{figure}[!ht]
+\begin{figure}[H]
   \centering
   \includegraphics[height=0.5\textwidth]{img/screens/basic/basic20}
   \caption{Linking the Beta to ResistantR differential equation}
@@ -183,13 +183,13 @@ The same principle applies to the Beta variable. Since Beta is used in Infection
 
 At this point we are done with a simple model that incorporates stocks representing different population groups for observation, flows that are updating the number of individuals in each group of people and parameters that set the initial values and flow values in the model.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
   \centering
   \includegraphics[height=0.5\textwidth]{img/screens/basic/basic21}
   \caption{The model with basic stocks, parameters and flows with infection}
 \end{figure}
 
-%\begin{figure}[!ht]
+%\begin{figure}[H]
 %    \centering
 %    \begin{subfigure}[b]{0.48\textwidth}
 %        \includegraphics[width=\textwidth]{img/screens/basic/basic5}
