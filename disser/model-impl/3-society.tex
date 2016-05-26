@@ -25,3 +25,27 @@ In order to use the TotalPopulation parameter in the Society stock value, we nee
   \includegraphics[height=0.5\textwidth]{img/screens/society/society3}
   \caption{Linking the Society and TotalPopulation in the model}
 \end{figure}
+
+In order to indicate the number of individuals entering the hospital from Society into different categories, we need to create a parameter $m$. This variable is a fraction of incoming people that are colonized with susceptible bacteria. The value of it may differ from one disease to another, but we set a symbolic value of 0.3 to it.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=0.3\textwidth]{img/screens/society/society4}
+  \caption{The properties of parameter $m$}
+\end{figure}
+
+Another parameter that is necessary for the flows of people is $\myu$. This variable indicates the total number of individuals entering the hospital daily. This number also provides the average length of stay in the hospital, which is equal to $1/\myu$. We set the value of this parameter to 0.1.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=0.5\textwidth]{img/screens/society/society6}
+  \caption{The parameter $\myu$ and its properties}
+\end{figure}
+
+After creating the mentioned parameters, we can add them to our model. The amount of different interactive elements of the model is increasing, so it is a good practice to keep things separated. We put the parameters near the other ones.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=0.3\textwidth]{img/screens/society/society5}
+  \caption{Placing $m$ and $\myu$ in the model}
+\end{figure}
