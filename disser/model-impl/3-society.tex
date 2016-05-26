@@ -26,6 +26,22 @@ In order to use the TotalPopulation parameter in the Society stock value, we nee
   \caption{Linking the Society and TotalPopulation in the model}
 \end{figure}
 
+The next step is to create the first flow from Society stock. EnterS flow will go from Society to Susceptible, indicating the incoming individuals colonized by susceptible strain of the bacteria.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=0.5\textwidth]{img/screens/society/society7}
+  \caption{The flow of EnterS}
+\end{figure}
+
+The value of the EnterS flow will depend on two more parameters that we are going to create next. As it is seen from the corresponding figure, we are setting the value of EnterS to $\mu m$.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=0.3\textwidth]{img/screens/society/society16}
+  \caption{The properties of EnterS flow}
+\end{figure}
+
 In order to indicate the number of individuals entering the hospital from Society into different categories, we need to create a parameter $m$. This variable is a fraction of incoming people that are colonized with susceptible bacteria. The value of it may differ from one disease to another, but we set a symbolic value of 0.3 to it.
 
 \begin{figure}[H]
@@ -49,3 +65,12 @@ After creating the mentioned parameters, we can add them to our model. The amoun
   \includegraphics[height=0.5\textwidth]{img/screens/society/society5}
   \caption{Placing $m$ and $\mu$ in the model}
 \end{figure}
+
+Since both parameters that we created are used in the value expression of the flow of incoming individuals infected with susceptible bacteria, we will need to connect the parameters with the flow element.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=0.5\textwidth]{img/screens/society/society8}
+  \caption{Binding $m$ and $\mu$ to the EnterS flow}
+\end{figure}
+
