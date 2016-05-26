@@ -251,6 +251,7 @@ The main parameters for the recovery flows are created now, they can be placed i
   \caption{The recovery rate parameters placed in the model}
 \end{figure}
 
+First of all, we know that it is more likely possible to cure the population infected with susceptible strain of the bacteria. Since the treatment with drug 1 is regular, there will always be a flow of people treated by the drug.
 
 \begin{figure}[H]
   \centering
@@ -258,11 +259,15 @@ The main parameters for the recovery flows are created now, they can be placed i
   \caption{The flow of Recovery from susceptible bacteria}
 \end{figure}
 
+However, the drug 1 is not the only reason. The recovery depends on other two parameters also and equals to $(\tau_1 + \tau_2 + \gamma) \cdot Susceptible$. In the properties window of the IDE, we can specify the mentioned value, which will become our differential equation.
+
 \begin{figure}[H]
   \centering
   \includegraphics[height=0.3\textwidth]{img/screens/recovery/recovery5}
   \caption{The properties of RecoveryS flow}
 \end{figure}
+
+Since the used variables are already present in the model as parameters, we need to connect them to the RecoveryS flow to prevent errors. The values of the parameters will be looked up during the runtime and used to decrement the number of individuals infected by susceptible bacteria.
 
 \begin{figure}[H]
   \centering
