@@ -74,3 +74,35 @@ Since both parameters that we created are used in the value expression of the fl
   \caption{Binding $m$ and $\mu$ to the EnterS flow}
 \end{figure}
 
+It is necessary to mention that not all of the entering individuals are colonized with bacteria. Therefore, we create a flow of people from Society stock to the Uncolonized stock.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=0.4\textwidth]{img/screens/society/society9 }
+  \caption{The flow of entering individuals uncolonized with bacteria}
+\end{figure}
+
+The value of the EnterX flow is different from that of EnterS by only one coefficient - it is $(1 - m)$ instead of $m$. The values of these two flows sum up to $\mu$.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=0.3\textwidth]{img/screens/society/society17 }
+  \caption{Properties of the EnterX flow}
+\end{figure}
+
+Like in the case of EnterS, the expession indicating the value of EnterX also uses parameters $m$ and $\mu$. This is why we need to connect the parameters with the EnterX flow to enable the referencing of variables. Each of the parameters has two bindings after this.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{img/screens/society/society10}
+        \caption{The connections of parameter $m$}
+    \end{subfigure}
+    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+      %(or a blank line to force the subfigure onto a new line)
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{img/screens/society/society11}
+        \caption{The connections of parameter $\mu$}
+    \end{subfigure}
+    \caption{Binding parameters to EnterX flow}
+\end{figure}
