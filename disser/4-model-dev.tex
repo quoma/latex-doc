@@ -66,15 +66,15 @@ When the Susceptible stock is connected with the created parameter, we can refer
 \begin{figure}[!ht]
   \centering
   \includegraphics[width=0.5\textwidth]{img/screens/basic/basic7}
-  \caption{Binding a parameter to Susceptible stock}
+  \caption{Properties of the S0 parameter}
 \end{figure}
 
 After having connected the Susceptible stock with its parameter, we can do the same thing to Uncolonized stock. The parameter for its initial value will be called X0. The connection between the parameter and its stock is similar to the previous example.
 
 \begin{figure}[!ht]
   \centering
-  \includegraphics[height=0.5\textwidth]{img/screens/basic/basic9}
-  \caption{Binding a parameter to Susceptible stock}
+  \includegraphics[height=0.3\textwidth]{img/screens/basic/basic9}
+  \caption{Binding a parameter to Uncolonized stock}
 \end{figure}
 
 The value of X0 will be the same that we have set to S0. On the following figure we can see how it is set to 0.33.
@@ -82,9 +82,24 @@ The value of X0 will be the same that we have set to S0. On the following figure
 \begin{figure}[!ht]
   \centering
   \includegraphics[width=0.5\textwidth]{img/screens/basic/basic6}
-  \caption{Binding a parameter to Susceptible stock}
+  \caption{Properties of the X0 parameter}
 \end{figure}
 
+We have set the initial values for our Susceptible and Uncolonized stocks. Finally, we are ready to create the corresponding parameter for Resistant stock. The parameter will be connected to the stock, so that we can use its value to specify the initial value of the population infected by resistant strain.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=0.2\textwidth]{img/screens/basic/basic10}
+  \caption{Binding a parameter to Resistant stock}
+\end{figure}
+
+The value of the R0 should complement the values of X0 and S0 to form a sum of 1. As we mentioned before, the three stocks are representing probabilities of falling into corresponding categories of individuals. That is why to the total sum of the initial values of these parameters should be equal to 1. Therefore, the initial value of X0 is set to 0.34. While it is not equal to the previous parameters, it is chosen to be as close to them as possible.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.5\textwidth]{img/screens/basic/basic5}
+  \caption{R0 property and its properties}
+\end{figure}
 
 
 % That's why we will set the initial values as 0.33, 0.33 and 0.34 (approximately equal values).
