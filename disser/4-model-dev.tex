@@ -250,3 +250,49 @@ The main parameters for the recovery flows are created now, they can be placed i
   \includegraphics[height=0.5\textwidth]{img/screens/recovery/recovery3}
   \caption{The recovery rate parameters placed in the model}
 \end{figure}
+
+Similar to the recovery from susceptible strain, the individuals infected with resistant bacteria are also getting treated and recovered. We create the recovery flow that starts from Resistant stock and goes to the Uncolonized stock and name it RecoveryR.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=0.5\textwidth]{img/screens/recovery/recovery6}
+  \caption{The flow of Recovery from susceptible bacteria}
+\end{figure}
+
+The amount of recovery from resistant strain is similar to the value of InfectionS. However, in this case the rate of recovery does not depend on $\tau_1$, the rate of treatment with drug 1. This fact is quite obvious, since the bacteria of this group are resistant to the drug 1. Therefore the recovery rate in this flow is equal to $(\tau_2 + \gamma) * Resistant$.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=0.3\textwidth]{img/screens/recovery/recovery5}
+  \caption{The properties of RecoveryS flow}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=0.6\textwidth]{img/screens/recovery/recovery7}
+  \caption{Parametrization of RecoveryS}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=0.5\textwidth]{img/screens/recovery/recovery8}
+  \caption{The flow of Recovery from resistant bacteria}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=0.3\textwidth]{img/screens/recovery/recovery10}
+  \caption{The rate of recovery from resistant strain}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=0.6\textwidth]{img/screens/recovery/recovery9}
+  \caption{Binding parameters to RecoveryR}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=0.6\textwidth]{img/screens/recovery/recovery11}
+  \caption{The simulation model with infection and recovery}
+\end{figure}
