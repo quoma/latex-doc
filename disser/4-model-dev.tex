@@ -153,10 +153,41 @@ The value of the InfectionR is somewhat similar to the value of InfectionS. We s
 
 \begin{figure}[!ht]
   \centering
-  \includegraphics[height=0.3\textwidth]{img/screens/basic/basic16}
+  \includegraphics[height=0.4\textwidth]{img/screens/basic/basic16}
   \caption{The rate of infection by resistant strain}
 \end{figure}
 
+The new constant is introduced at this point point, which is denoted as $c$. The variable indicates the portion of Beta which does not transfer to the resistant category. If $c = 0$, then the rate of InfectionR is identical to the value of InfectionS. With increasing value of $c$, the rate of InfectionR decreases. We set 0.1 as the initial value for this parameter.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=0.4\textwidth]{img/screens/basic/basic18}
+  \caption{The value of fitness cost of resistance to drug 1}
+\end{figure}
+
+In order to enable the usage of $c$ parameter in the differential equation of InfectionR, we need to connect it to the corresponding flow to indicate the usage of the variable. This way, InfectionR flow is dependent from the newly created $c$ constant.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=0.5\textwidth]{img/screens/basic/basic19}
+  \caption{Putting $c$ constant into the model}
+\end{figure}
+
+The same principle applies to the Beta variable. Since Beta is used in InfectionR as well as in InfectionS, the parameter should be connected to the flow, too. The InfectionR flow has two dependent parameters at the moment (there are also the values of Uncolonized and Resistant stocks).
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=0.5\textwidth]{img/screens/basic/basic20}
+  \caption{Linking the Beta to ResistantR differential equation}
+\end{figure}
+
+At this point we are done with a simple model that incorporates stocks representing different population groups for observation, flows that are updating the number of individuals in each group of people and parameters that set the initial values and flow values in the model.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=0.5\textwidth]{img/screens/basic/basic21}
+  \caption{The model with basic stocks, parameters and flows with infection}
+\end{figure}
 
 %\begin{figure}[!ht]
 %    \centering
