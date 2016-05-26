@@ -138,7 +138,7 @@ Now we need to create the first flow element. The flow that we are going to crea
   \caption{Uncolonized population is constantly infected by susceptible bacteria strain}
 \end{figure}
 
-In order to specify the rate at which the population of uncolonized group is infected by susceptible bacteria, we are going to open the properties of InfectionS. In the value textbox, as it can be seen from the figure, the value we specified is equal to $Beta \times Susceptible \times Uncolonized$. As it is noticeable, there is some new value here, which is Beta. Creation of Beta parameter will be our next step.
+In order to specify the rate at which the population of uncolonized group is infected by susceptible bacteria, we are going to open the properties of InfectionS. In the value textbox, as it can be seen from the figure, the value we specified is equal to $Beta \cdot Susceptible \cdot Uncolonized$. As it is noticeable, there is some new value here, which is Beta. Creation of Beta parameter will be our next step.
 
 \begin{figure}[H]
   \centering
@@ -170,7 +170,7 @@ Now we also need to connect the Resistant stock to the system. Uncolonized indiv
   \caption{The rate of infection by resistant strain}
 \end{figure}
 
-The value of the InfectionR is somewhat similar to the value of InfectionS. We set it to be $Beta \times (1-c) \times Resistant \times Uncolonized$. Here there is a new variable called $c$, which will be discussed next.
+The value of the InfectionR is somewhat similar to the value of InfectionS. We set it to be $Beta \cdot (1-c) \cdot Resistant \cdot Uncolonized$. Here there is a new variable called $c$, which will be discussed next.
 
 \begin{figure}[H]
   \centering
@@ -259,7 +259,7 @@ Similar to the recovery from susceptible strain, the individuals infected with r
   \caption{The flow of Recovery from susceptible bacteria}
 \end{figure}
 
-The amount of recovery from resistant strain is similar to the value of InfectionS. However, in this case the rate of recovery does not depend on $\tau_1$, the rate of treatment with drug 1. This fact is quite obvious, since the bacteria of this group are resistant to the drug 1. Therefore the recovery rate in this flow is equal to $(\tau_2 + \gamma) * Resistant$.
+The amount of recovery from resistant strain is similar to the value of InfectionS. However, in this case the rate of recovery does not depend on $\tau_1$, the rate of treatment with drug 1. This fact is quite obvious, since the bacteria of this group are resistant to the drug 1. Therefore the recovery rate in this flow is equal to $(\tau_2 + \gamma) \cdot Resistant$.
 
 \begin{figure}[H]
   \centering
