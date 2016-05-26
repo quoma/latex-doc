@@ -219,7 +219,7 @@ At this point we are done with a simple model that incorporates stocks represent
 
 In this section we are going to build and describe the recovery flows of the previously created stocks. The model that we are building considers all the entities relative to drug 1, which is used in the hospital. Additionally, we assume that there exists at least one antibiotic which is fully effective against any bacteria.
 
-Both antibiotic drugs are used intensively in the hospital and we are going to indicate the rates of their usage by corresponding parameters. The rate of treatment with drug 1 is going to be named \tau_1. We set the initial value of 0.1 to it.
+Both antibiotic drugs are used intensively in the hospital and we are going to indicate the rates of their usage by corresponding parameters. The rate of treatment with drug 1 is going to be named $\tau_1$. We set the initial value of 0.1 to it.
 
 \begin{figure}[H]
   \centering
@@ -227,17 +227,23 @@ Both antibiotic drugs are used intensively in the hospital and we are going to i
   \caption{Rate of treatment with drug 1}
 \end{figure}
 
+The rate of treatment with drug 2 is also very important. Without drug 2 treatment, the population of Resistant strain holder cannot remain stable. The name of the parameter is correspondingly $\tau_2$. We set its initial value to be 0.01, which is smaller than $\tau_1$.
+
 \begin{figure}[H]
   \centering
   \includegraphics[height=0.3\textwidth]{img/screens/recovery/recovery2}
-  \caption{Properties of the tau2 parameter}
+  \caption{Properties of the $\tau_2$ parameter}
 \end{figure}
+
+The next parameter is $\gamma$ (gamma). This variable indicates the rate of occasional recovery of any individual either from Susceptible group or from Resistant one. This kind of recoveries often happen in real life and it is truly difficult to explain the exact reason of such incidents. We set the value of this probability to be 1\%.
 
 \begin{figure}[H]
   \centering
   \includegraphics[height=0.25\textwidth]{img/screens/recovery/recovery4}
   \caption{Occasional treatment rate}
 \end{figure}
+
+The main parameters for the recovery flows are created now, they can be placed in the model near the previously created elements. Our next step here is to create the actual flows that will update the quantities in the stocks.
 
 \begin{figure}[H]
   \centering
