@@ -291,11 +291,15 @@ The amount of recovery from resistant strain is similar to the value of Infectio
   \caption{The rate of recovery from resistant strain}
 \end{figure}
 
+The variables used in the specification of RecoveryR value are also already created and present in the model. To allow their usage in the expression of the flow value, we need to mark them as dependencies of the current flow. To do so, we connect them using the graphical interface.
+
 \begin{figure}[H]
   \centering
   \includegraphics[height=0.6\textwidth]{img/screens/recovery/recovery9}
   \caption{Binding parameters to RecoveryR}
 \end{figure}
+
+At this point, we obtain a simulation model that has the proper circulation of the population between the observation groups. The recovery flows provide the regeneration of Uncolonized stock, making the execuion of the model much more interesting and unpredictable.
 
 \begin{figure}[H]
   \centering
