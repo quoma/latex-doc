@@ -13,6 +13,27 @@ This chapter is going to describe the process of implementation, i.e. transition
 %  \caption{A picture of a gull.}
 %\end{figure}
 
+%\begin{figure}[H]
+%    \centering
+%    \begin{subfigure}[b]{0.48\textwidth}
+%        \includegraphics[width=\textwidth]{img/screens/basic/basic5}
+%        \caption{The initial parameter for Resistant stock}
+%    \end{subfigure}
+%    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+%      %(or a blank line to force the subfigure onto a new line)
+%    \begin{subfigure}[b]{0.48\textwidth}
+%        \includegraphics[width=\textwidth]{img/screens/basic/basic6}
+%        \caption{The initial parameter for Uncolonized stock}
+%    \end{subfigure}
+%    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+%      %(or a blank line to force the subfigure onto a new line)
+%    \begin{subfigure}[b]{0.48\textwidth}
+%        \includegraphics[width=\textwidth]{img/screens/basic/basic7}
+%        \caption{The initial parameter for Susceptible stock}
+%    \end{subfigure}
+%    \caption{Parameters bound to the S, X, R stocks}
+%\end{figure}
+
 AnyLogic is a system that provides many useful components that can be used for modeling. The list of the available elements can be seen in the figure.
 
 \begin{figure}[H]
@@ -189,23 +210,37 @@ At this point we are done with a simple model that incorporates stocks represent
   \caption{The model with basic stocks, parameters and flows with infection}
 \end{figure}
 
-%\begin{figure}[H]
-%    \centering
-%    \begin{subfigure}[b]{0.48\textwidth}
-%        \includegraphics[width=\textwidth]{img/screens/basic/basic5}
-%        \caption{The initial parameter for Resistant stock}
-%    \end{subfigure}
-%    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
-%      %(or a blank line to force the subfigure onto a new line)
-%    \begin{subfigure}[b]{0.48\textwidth}
-%        \includegraphics[width=\textwidth]{img/screens/basic/basic6}
-%        \caption{The initial parameter for Uncolonized stock}
-%    \end{subfigure}
-%    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
-%      %(or a blank line to force the subfigure onto a new line)
-%    \begin{subfigure}[b]{0.48\textwidth}
-%        \includegraphics[width=\textwidth]{img/screens/basic/basic7}
-%        \caption{The initial parameter for Susceptible stock}
-%    \end{subfigure}
-%    \caption{Parameters bound to the S, X, R stocks}
-%\end{figure}
+
+
+
+
+
+\section{Recovery Rates}
+
+In this section we are going to build and describe the recovery flows of the previously created stocks. The model that we are building considers all the entities relative to drug 1, which is used in the hospital. Additionally, we assume that there exists at least one antibiotic which is fully effective against any bacteria.
+
+Both antibiotic drugs are used intensively in the hospital and we are going to indicate the rates of their usage by corresponding parameters. The rate of treatment with drug 1 is going to be named \tau_1. We set the initial value of 0.1 to it.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=0.3\textwidth]{img/screens/recovery/recovery1}
+  \caption{Rate of treatment with drug 1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=0.3\textwidth]{img/screens/recovery/recovery2}
+  \caption{Properties of the tau2 parameter}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=0.25\textwidth]{img/screens/recovery/recovery4}
+  \caption{Occasional treatment rate}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=0.5\textwidth]{img/screens/recovery/recovery3}
+  \caption{The recovery rate parameters placed in the model}
+\end{figure}
