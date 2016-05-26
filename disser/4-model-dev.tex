@@ -125,6 +125,21 @@ In order to specify the rate at which the population of uncolonized group is inf
   \caption{The flow amount for InfectionS}
 \end{figure}
 
+The Beta parameter ($\beta$) is the contact rate between the individuals of the observed hospital society. It means that this fraction of people are going to be contacted by any given individual. We create the parameter Beta and set its value to be 0.2.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=0.3\textwidth]{img/screens/basic/basic14}
+  \caption{Beta parameter - the contact rate}
+\end{figure}
+
+In order for the AnyLogic compiler to see the Beta variable and find the corresponding value, we need to specify it as a dependency for our InfectionS flow. The value of the InfectionS flow uses the Beta parameter value, so we link them with each other, as it is indicated in the figure below.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=0.5\textwidth]{img/screens/basic/basic15}
+  \caption{Beta parameter as a dependency of InfectionS}
+\end{figure}
 
 %\begin{figure}[!ht]
 %    \centering
