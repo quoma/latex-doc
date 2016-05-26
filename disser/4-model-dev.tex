@@ -109,12 +109,20 @@ On the following figure we can observe the current intermediate result. Each sto
   \caption{The created stocks of populations with their respective parameters}
 \end{figure}
 
-Now we need to create the first flow element. The flow that we are going to create is starting from the uncolonized stock and headed to the susceptible stock. The figure below shows how it looks like in the model representation.
+Now we need to create the first flow element. The flow that we are going to create is starting from the uncolonized stock and headed to the susceptible stock. The figure below shows how it looks like in the model representation. We call this flow InfectionS to indicate that it represents an infection of people by susceptible strain of bacteria.
 
 \begin{figure}[!ht]
   \centering
   \includegraphics[height=0.6\textwidth]{img/screens/basic/basic13}
   \caption{Uncolonized population is constantly infected by susceptible bacteria strain}
+\end{figure}
+
+In order to specify the rate at which the population of uncolonized group is infected by susceptible bacteria, we are going to open the properties of InfectionS. In the value textbox, as it can be seen from the figure, the value we specified is equal to $Beta \times Susceptible \times Uncolonized$. As it is noticeable, there is some new value here, which is Beta. Creation of Beta parameter will be our next step.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=0.3\textwidth]{img/screens/basic/basic12}
+  \caption{The flow amount for InfectionS}
 \end{figure}
 
 
