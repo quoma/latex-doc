@@ -61,25 +61,34 @@ In order to set the initial values to the stocks, we will need to create so-call
   \caption{Binding a parameter to Susceptible stock}
 \end{figure}
 
-Since the stocks that we have created represent the probabilities of any individual to fall into one of the categories (susceptible, resistant or uncolonized), they should sum up to 1. That's why we will set the initial values as 0.33, 0.33 and 0.34 (approximately equal values).
+When the Susceptible stock is connected with the created parameter, we can refer to that parameter when specifying the initial value of it. Since the stocks that we have created represent the probabilities of any individual to fall into one of the categories (susceptible, resistant or uncolonized), they should sum up to 1. Since we want to set approximately equal initial values to all three groups of people, we set S0 to be 0.33.
 
 \begin{figure}[!ht]
-    \centering
-    \begin{subfigure}[b]{0.48\textwidth}
-        \includegraphics[width=\textwidth]{img/screens/basic/basic5}
-        \caption{The initial parameter for Resistant stock}
-    \end{subfigure}
-    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
-      %(or a blank line to force the subfigure onto a new line)
-    \begin{subfigure}[b]{0.48\textwidth}
-        \includegraphics[width=\textwidth]{img/screens/basic/basic6}
-        \caption{The initial parameter for Uncolonized stock}
-    \end{subfigure}
-    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
-      %(or a blank line to force the subfigure onto a new line)
-    \begin{subfigure}[b]{0.48\textwidth}
-        \includegraphics[width=\textwidth]{img/screens/basic/basic7}
-        \caption{The initial parameter for Susceptible stock}
-    \end{subfigure}
-    \caption{Parameters bound to the S, X, R stocks}
+  \centering
+  \includegraphics[height=0.5\textwidth]{img/screens/basic/basic7}
+  \caption{Binding a parameter to Susceptible stock}
 \end{figure}
+
+
+% That's why we will set the initial values as 0.33, 0.33 and 0.34 (approximately equal values).
+
+%\begin{figure}[!ht]
+%    \centering
+%    \begin{subfigure}[b]{0.48\textwidth}
+%        \includegraphics[width=\textwidth]{img/screens/basic/basic5}
+%        \caption{The initial parameter for Resistant stock}
+%    \end{subfigure}
+%    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+%      %(or a blank line to force the subfigure onto a new line)
+%    \begin{subfigure}[b]{0.48\textwidth}
+%        \includegraphics[width=\textwidth]{img/screens/basic/basic6}
+%        \caption{The initial parameter for Uncolonized stock}
+%    \end{subfigure}
+%    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+%      %(or a blank line to force the subfigure onto a new line)
+%    \begin{subfigure}[b]{0.48\textwidth}
+%        \includegraphics[width=\textwidth]{img/screens/basic/basic7}
+%        \caption{The initial parameter for Susceptible stock}
+%    \end{subfigure}
+%    \caption{Parameters bound to the S, X, R stocks}
+%\end{figure}
