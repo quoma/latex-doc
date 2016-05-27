@@ -34,11 +34,15 @@ For all parameters selected by us as being particularly important, we create the
   \caption{Created sliders for all sensitive parameters}
 \end{figure}
 
+The value of $\beta$ can change depending on the society being observed. The spatial characteristic of the hospital's building is also important, as it may affect the rate of contacts between different patients and medical workers. The value of our contact rate will vary from 0 to 4.
+
 \begin{figure}[H]
   \centering
   \includegraphics[height=0.3\textwidth]{img/screens/sliders/sliders6}
   \caption{Properties of $\beta$ slider}
 \end{figure}
+
+The parameter $c$ is one of the key parameters that has much influence on the population infected by resistant bacteria. Since it represents a portion of a flow, it will vary between 0 and 1. When $c$ is zero, the InfectionR flow will not differ from the infectionS flow, and approaches zero as $c$ approaches to 1.
 
 \begin{figure}[H]
   \centering
@@ -46,11 +50,15 @@ For all parameters selected by us as being particularly important, we create the
   \caption{Properties of $c$ slider}
 \end{figure}
 
+Occasional recovery from both bacteria strains occur with rate $\gamma$ in our system. Since it represents a probability, the value always lies between 0 and 1. However to make the slider less sensitive for changes, we set its minimum and maximum values to be 0.01 and 0.10 respectively.
+
 \begin{figure}[H]
   \centering
   \includegraphics[height=0.3\textwidth]{img/screens/sliders/sliders9}
   \caption{Properties of $\gamma$ slider}
 \end{figure}
+
+The slider that have been created allow the user to change the value of a particular parameter during the simulation process and see how it affects the flow in the system. The model execution in AnyLogic displays the actual value of a parameter near its name.
 
 \begin{figure}[H]
   \centering
@@ -58,4 +66,4 @@ For all parameters selected by us as being particularly important, we create the
   \caption{Updating the slider value during the model execution}
 \end{figure}
 
-
+By dragging the slider, the user can change the value of each parameter between its predefined minimum and maximum values.
