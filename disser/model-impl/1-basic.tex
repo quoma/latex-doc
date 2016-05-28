@@ -37,7 +37,10 @@ AnyLogic is a system that provides many useful components that can be used for m
   \centering
   \includegraphics[height=0.5\textwidth]{img/screens/basic/basic22}
   \caption{The list of interactive elements used for System Dynamics models}
+  \label{basic22}
 \end{figure}
+
+We are going to use stocks as the containers for each of our population groups. Each stock element in AnyLogic provides a way of keeping track of its value. The value can change depending on the flows that control the flow of population from one group to another (You can see flow elements on Figure \ref{basic22}). We create 3 stocks that are going to be called Susceptible, Resistant and Uncolonized, as you can see on Figure \ref{basic34}.
 
 \begin{figure}[H]
     \centering
@@ -52,6 +55,7 @@ AnyLogic is a system that provides many useful components that can be used for m
         \caption{The properties of the Susceptible stock}
     \end{subfigure}
     \caption{Creation of the basic stock elements}
+    \label{basic34}
 \end{figure}
 
 Here we can see how every entity is treated in AnyLogic. There have been created three stocks for three different groups of the hospital population. We name every stock as Susceptible, Uncolonized and Resistant. Each stock needs to have an initial value, which indicates how many individuals were present in each group at the beginning. We call these initial values S0, X0 and R0 respectively.
